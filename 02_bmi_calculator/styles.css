@@ -1,0 +1,133 @@
+:root{
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --guide-bg: #e0e7ff;
+  --border-color: #d1d5db;
+}
+
+/*Base reset*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container{
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+}
+
+h1{
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+input{
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus{
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+button{
+  padding: 0.875rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-bottom: 1.5rem;
+}
+
+button:hover{
+  background-color: var(--primary-hover);
+}
+
+button:active{
+  transform: scale(0.98);
+}
+
+#result{
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  min-height: 1.5rem; 
+  color: var(--text-main);
+}
+
+#guide{
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background-color: var(--guide-bg);
+  border-radius: 8px;
+}
+
+#guide h2{
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-hover);
+}
+
+#guide ul{
+  list-style-type: none;
+}
+
+#guide li{
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.4;
+}
+#guide li::before{
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
