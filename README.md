@@ -1,2 +1,2 @@
 # js-devweeknds
-learning javascript
+javascript practice
